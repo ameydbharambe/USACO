@@ -10,9 +10,9 @@ for i in range(N):
 for i in range(N):
     liars = 0
     for j in range(N):
-        if (list1[j][0] == "G") and (list1[j][1] > list1[i][1]):#check if consistent with other data
+        if (list1[j][0] == "G") and (list1[j][1] > list1[i][1]):#check if the value after the direction is greater than the value being compared to because if it is there is contradiction
             liars += 1
-        elif (list1[j][0] == "L") and (list1[j][1] < list1[i][1]): #check if consistent with other data
+        elif (list1[j][0] == "L") and (list1[j][1] < list1[i][1]): ##check if the value after the direction is less than the value being compared to because if it is there is contradiction
             liars += 1
     count = min(liars, count) #make count as small as possible after checking each cow
 print(count)
